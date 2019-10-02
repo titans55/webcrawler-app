@@ -10,7 +10,6 @@ var _ = require('lodash');
 var async = require('async');
 var cheerio = require('cheerio');
 var request = require('request');
-var expressWs = require('express-ws')(app);
 
 //global variables
 websocket = null
@@ -125,7 +124,6 @@ var WebSocketServer = require('ws').Server,
     })
 
 var server = app.listen(8081, function () {
-    var host = server.address().address
     var port = server.address().port
     
     console.log("Webcrawler app listening at %s:%s", "localhost", port)
